@@ -1,0 +1,14 @@
+[Unit]
+Description=shevek
+After=network.target
+
+[Service]
+Type=simple
+User=imdat
+WorkingDirectory=/home/imdat/dev/shevek
+ExecStart=/home/linuxbrew/.linuxbrew/bin/node .
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
